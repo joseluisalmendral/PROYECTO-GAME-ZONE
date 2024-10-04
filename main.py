@@ -1,11 +1,12 @@
 #preguntados, tres_en_raya, ahorcado, piedra_papel_tijera, hundir_la_flota
 
 #en un futuro REFACTORIZAR los modulos de mecanicas de 'juego' como obtener juegos
-#listar juegos
+#para quedar todo mucho mas limpio
 
 import os
 from pprint import pprint
 from src.piedra_papel_tijera import PiedraPapelTijera
+from src.preguntados import Preguntados
 
 class MenuJuego:
     def __init__(self):
@@ -47,7 +48,7 @@ class MenuJuego:
 
     #imprimimos los juegos disponibles con la fantasia
     def mostrarOpcionesMenu(self):
-        
+        os.system('cls')
         print("""
         ██████╗ ██╗███████╗███╗   ██╗██╗   ██╗███████╗███╗   ██╗██╗██████╗ ██╗  ██╗██╗
         ██╔══██╗██║██╔════╝████╗  ██║██║   ██║██╔════╝████╗  ██║██║██╔══██╗╚██╗██╔╝██║
@@ -88,11 +89,11 @@ class MenuJuego:
         #game_class = self.juegos[eleccion]()#declaramos la clase de forma dinamica
         game_class = globals()[self.juegos[eleccion]]()
         while True:
-            result = game_class.play()
+            result = game_class.jugar()
             if result == 'volver_jugar':
+                os.system('cls')
                 continue
             elif result == 'volver_menu':
-                os.system('cls')
                 self.mostrarOpcionesMenu()
                 break
             elif result == 'salir':
