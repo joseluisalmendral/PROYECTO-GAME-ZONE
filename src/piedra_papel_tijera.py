@@ -50,7 +50,12 @@ class PiedraPapelTijera:
 
             print(f"\nHas elegido '{self.eleccion_jugador}' y la maquina '{self.eleccion_maquina}'")
             
-            if self.eleccion_maquina in self.elementos[self.eleccion_jugador]:
+            #caso empate
+            if self.eleccion_maquina == self.eleccion_jugador:
+                self.marcador[0] += 1
+                self.marcador[1] += 1
+
+            elif self.eleccion_maquina in self.elementos[self.eleccion_jugador]:
                 #caso ganador
                 self.marcador[0] += 1
             else:
