@@ -8,6 +8,7 @@ from pprint import pprint
 from src.piedra_papel_tijera import PiedraPapelTijera
 from src.preguntados import Preguntados
 from src.hundir_la_flota import HundirLaFlota
+from src.ahorcado import Ahorcado
 
 class MenuJuego:
     def __init__(self):
