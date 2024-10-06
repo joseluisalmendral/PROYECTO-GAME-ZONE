@@ -23,13 +23,23 @@ El menú está programado para mostrar los titulos disponibles según los archiv
 
 Por el momento son:
 
-- **Preguntados** : En este juego tendremos que ir haciendo preguntas al usuario sobre una variedad de temas y el usuario tendrá que ir respondiendo correctamente para avanzar. Las preguntas podrán ser de distintas categorías: cultura general, historia, entretenimiento, actualidad, etc. El usuario ganará el juego si consigue adivinar 10 preguntas seguidas.
+- **Hundir la flota** : En este juego queremos que el usuario juegue contra la máquina este mítico juego de estrategia. El usuario tiene que tratar de encontrar los barcos de la máquina en un tablero 10x10 antes de que la máquina encuentre los suyos.
 
-- **Ahorcado**: El usuario juega contra la máquina. En este juego el usuario tendrá que adivinar una palabra elegida al azar por la máquina de entre una lista que nosotros definiremos previamente. Cada vez que el usuario se equivoque, mostraremos una nueva parte del personaje del ahorcado en una horca. Si el usuario consigue adivinar la palabra antes de que se le acaben las oportunidades, gana el juego.
+![Hundir la flota](image-4.png)
 
 - **Piedra-papel-tijera** : en este juego el usuario tendrá que elegir una de las opciones y después la máquina eligirá otra al azar. Gana el primero que gane tres rondas en total. Además la empresa nos ha pedido que, además del juego clásico, el usuario pueda elegir la opción de jugar a **piedra-papel-tijera-lagarto-spock**. 
 
-- **Hundir la flota** : En este juego queremos que el usuario juegue contra la máquina este mítico juego de estrategia. El usuario tiene que tratar de encontrar los barcos de la máquina en un tablero 10x10 antes de que la máquina encuentre los suyos.
+![Piedra-papel-tijera](image-3.png)
+
+- **Ahorcado**: El usuario juega contra la máquina. En este juego el usuario tendrá que adivinar una palabra elegida al azar por la máquina de entre una lista que nosotros definiremos previamente. Cada vez que el usuario se equivoque, mostraremos una nueva parte del personaje del ahorcado en una horca. Si el usuario consigue adivinar la palabra antes de que se le acaben las oportunidades, gana el juego.
+
+![Ahorcadot](image-1.png)
+
+- **Preguntados** : En este juego tendremos que ir haciendo preguntas al usuario sobre una variedad de temas y el usuario tendrá que ir respondiendo correctamente para avanzar. Las preguntas podrán ser de distintas categorías: cultura general, historia, entretenimiento, actualidad, etc. El usuario ganará el juego si consigue adivinar 10 preguntas seguidas.
+
+![Preguntados](image-2.png)
+
+(he dejado las preguntas para que se pedan copiar ya que las respuestas son poco flexibles)
 
 
 ## Hacer saber
@@ -42,5 +52,6 @@ Debido al tiempo, hay algunas validaciones que no están hechas dentro de los ju
 El archivo **prueba.py** no sirve para nada. Yo lo usé para desarrollar partes de la lógica pero nada más.
 
 
+## To do's futuros
 
-
+En un futuro se podrían hacer selectores previos de dificultades o madalidades los cuales serían super chulos, pero para completar la entrega con un código chulo, me he ceñido a los requisito y alguna cosilla más aunque otras se han tenido que quedar en el tintero.
