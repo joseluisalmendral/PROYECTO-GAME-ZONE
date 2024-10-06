@@ -9,25 +9,10 @@ class Ahorcado:
         self.letras_adivinadas = []
         self.letras_intentadas = []
 
-    def elegir_palabra(self):
-        palabras = support.palabras_a_elegir
-        import random
-        self.palabra_secreta = random.choice(palabras).lower()
-        self.letras_adivinadas = ['_'] * len(self.palabra_secreta)
-        self.letras_intentadas = []
-        self.intentos_restantes = 6
-
-    def mostrar_stickman(self):
-        # Mostramos el estado del ahorcado según los intentos restantes
-        print(self.trozos_stickman[6 - self.intentos_restantes])
-
-    def mostrar_estado(self):
-        # Mostrar la palabra oculta con los espacios y las letras adivinadas
-        print(' '.join(self.letras_adivinadas))
 
     def jugar(self):
 
-        os.system('cls')
+        self.limpiar_pantalla()
         self.elegir_palabra()
         while self.intentos_restantes > 0 and '_' in self.letras_adivinadas:
 
@@ -66,7 +51,26 @@ class Ahorcado:
 
         self.terminar_juego()
 
-    def limpiar_pantalla():
+        
+
+    def elegir_palabra(self):
+        palabras = support.palabras_a_elegir
+        import random
+        self.palabra_secreta = random.choice(palabras).lower()
+        self.letras_adivinadas = ['_'] * len(self.palabra_secreta)
+        self.letras_intentadas = []
+        self.intentos_restantes = 6
+
+    def mostrar_stickman(self):
+        # Mostramos el estado del ahorcado según los intentos restantes
+        print(self.trozos_stickman[6 - self.intentos_restantes])
+
+    def mostrar_estado(self):
+        # Mostrar la palabra oculta con los espacios y las letras adivinadas
+        print(' '.join(self.letras_adivinadas))
+
+
+    def limpiar_pantalla(self):
         if os.name == 'nt':
             os.system('cls')
         else:

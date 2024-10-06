@@ -9,6 +9,7 @@ from src.piedra_papel_tijera import PiedraPapelTijera
 from src.preguntados import Preguntados
 from src.hundir_la_flota import HundirLaFlota
 from src.ahorcado import Ahorcado
+from src.support import support_main as supp_main
 
 class MenuJuego:
     def __init__(self):
@@ -26,7 +27,7 @@ class MenuJuego:
         """        
         contenido = os.listdir('src')
         for juego in contenido:
-            if juego == "__pycache__":
+            if (juego == "__pycache__" or juego == 'support'):
                 continue
 
             #Formateo el nombre del archivo para mostrarlo al usuario
@@ -34,10 +35,11 @@ class MenuJuego:
             juego = juego.replace('_',' ')
             self.nombres_juegos.append(juego.upper())
         
-        for i,juego in enumerate(contenido):
-            if juego == "__pycache__":
+        for juego in contenido:
+            if (juego == "__pycache__" or juego == 'support'):
                 continue
 
+            print(juego)
             #Formateo el nombre del archivo para que tenga el mismo nombre que la clase que quiero
             #declarar dinamicamente
             juego = juego.replace('.py','')
@@ -53,23 +55,13 @@ class MenuJuego:
     #imprimimos los juegos disponibles con la fantasia
     def mostrarOpcionesMenu(self):
         os.system('cls')
-        print("""
-        ██████╗ ██╗███████╗███╗   ██╗██╗   ██╗███████╗███╗   ██╗██╗██████╗ ██╗  ██╗██╗
-        ██╔══██╗██║██╔════╝████╗  ██║██║   ██║██╔════╝████╗  ██║██║██╔══██╗╚██╗██╔╝██║
-        ██████╔╝██║█████╗  ██╔██╗ ██║██║   ██║█████╗  ██╔██╗ ██║██║██║  ██║ ╚███╔╝ ██║
-        ██╔══██╗██║██╔══╝  ██║╚██╗██║╚██╗ ██╔╝██╔══╝  ██║╚██╗██║██║██║  ██║ ██╔██╗ ╚═╝
-        ██████╔╝██║███████╗██║ ╚████║ ╚████╔╝ ███████╗██║ ╚████║██║██████╔╝██╔╝ ██╗██╗
-        ╚═════╝ ╚═╝╚══════╝╚═╝  ╚═══╝  ╚═══╝  ╚══════╝╚═╝  ╚═══╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝
-        """)
-        print("""
-                                ¿A QUÉ QUIERES JUGAR HOY?
-                                -------------------------
-        """)
-        for i,juego in enumerate(self.nombres_juegos):
-            print(f"                                {i+1}. {juego}")
+        print(supp_main.texto_bienvenida)
+        print(supp_main.texto_a_que_quieres_jugar)
         
-        print(f"\n                                 {(len(self.nombres_juegos)+1)}. SALIR")
-        print('\n')
+        for i,juego in enumerate(self.nombres_juegos):
+            print(f"\t\t\t\t{i+1}. {juego}")
+        
+        print(f"\n\t\t\t\t{(len(self.nombres_juegos)+1)}. SALIR\n")
 
         try:
             eleccion = int(input(f"Numero del juego al que quieres jugar --> ")) -1 #quitamos uno ya que al mostrar los juegos se lo sumamos y asi no empezaba en 0

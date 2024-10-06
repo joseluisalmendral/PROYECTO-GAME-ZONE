@@ -178,7 +178,7 @@ class Preguntados:
         
         #caso completar las 10 preguntas
         if self.preguntas_acertadas == 10:
-            os.system('cls')
+            self.limpiar_pantalla()
             print("FELICITACIONES!!!! LO HAS CONSEGUIDO\n")
             print(f"Preguntas acertadas --> {self.preguntas_acertadas}\n")
 
@@ -192,6 +192,12 @@ class Preguntados:
         for tupla in self.preguntas_respuestas:
             print(tupla)
         print("\n")
+
+    def limpiar_pantalla(self):
+        if os.name == 'nt':
+            os.system('cls')
+        else:
+            os.system('clear')
 
     def terminar_juego(self):
         while True:
