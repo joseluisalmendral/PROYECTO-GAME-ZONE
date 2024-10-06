@@ -7,12 +7,15 @@ import os
 from pprint import pprint
 from src.piedra_papel_tijera import PiedraPapelTijera
 from src.preguntados import Preguntados
+from src.hundir_la_flota import HundirLaFlota
 
 class MenuJuego:
     def __init__(self):
         self.juegos = []#nombres de las clases de los juegos para despues declararlas dinamicamente
         self.nombres_juegos = []#nombre de juegos 'family friendly' para el usuario
+        #obtenemos los juegos de nuestra carpeta src
         self.obtener_juegos()
+        #mostramos los juegos que tenemos en un listado al jugador para que elija
         self.mostrarOpcionesMenu()
 
 
@@ -41,7 +44,7 @@ class MenuJuego:
             _ = juego.split()
             juego = list(map(lambda j: j.title(),_))
             juego = "".join(juego)
-            #print(juego)
+
             self.juegos.append(juego)
 
 
