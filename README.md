@@ -27,9 +27,24 @@ Por el momento son:
 
 ![Hundir la flota](image-4.png)
 
+<ol>
+<li>Se te preguntará si quieres que se muestren donde están los barcos. (hecho por motivos de desarrollo o si se quiere comprobar la jugabilidad)</li>
+<li>Los barcos de la máquina se eligen de forma aleatoria sin que se pisen en diferentes orientaciones y por temas de tiempo, los del jugador también.</li>
+<li>Eliges letra de la fila</li>
+<li>Eliges numero de columna</li>
+<li>Si aciertas sigues eligiendo. Si no, pasará a ser turno de la máquina y con esta pasará lo mismo.</li>
+<li>El primero que elimine todos los barcos del oponente gana.</li>
+</ol>
+
 - **Piedra-papel-tijera** : en este juego el usuario tendrá que elegir una de las opciones y después la máquina eligirá otra al azar. Gana el primero que gane tres rondas en total. Además la empresa nos ha pedido que, además del juego clásico, el usuario pueda elegir la opción de jugar a **piedra-papel-tijera-lagarto-spock**. 
 
 ![Piedra-papel-tijera](image-3.png)
+
+<ol>
+<li>Elegimos cuantas rondas queremos que tenga la partida.</li>
+<li>Elegimos entre las opciones que nos muestran</li>
+<li>Hay que intentar ganar!</li>
+</ol>
 
 - **Ahorcado**: El usuario juega contra la máquina. En este juego el usuario tendrá que adivinar una palabra elegida al azar por la máquina de entre una lista que nosotros definiremos previamente. Cada vez que el usuario se equivoque, mostraremos una nueva parte del personaje del ahorcado en una horca. Si el usuario consigue adivinar la palabra antes de que se le acaben las oportunidades, gana el juego.
 
